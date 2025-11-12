@@ -99,7 +99,9 @@ function evaluarNota(nota) {
  * @returns {number} - El número mayor
  */
 function mayorDeTres(a, b, c) {
-  // TODO: Encuentra y retorna el mayor de los tres números
+  if (a >= b && a >= c) return a;
+  if (b >= a && b >= c) return b;
+  return c;
 }
 
 /**
