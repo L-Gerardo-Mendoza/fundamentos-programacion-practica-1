@@ -358,8 +358,18 @@ function obtenerFila(matriz, indiceFila) {
 function obtenerColumna(matriz, indiceColumna) {
   // TODO: Extrae todos los elementos de la columna indicada
   const columna = [];
+
+
+  for (let i = 0; i < matriz.length; i++) {
+    
+    if (indiceColumna < matriz[i].length) {
+      columna.push(matriz[i][indiceColumna]);
+    }
+  }
+
   return columna;
 }
+
 
 /**
  * Ejercicio 5.5: Transponer una matriz (6 puntos)
