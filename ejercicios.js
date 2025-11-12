@@ -341,7 +341,11 @@ function sumaMatriz(matriz) {
  */
 function obtenerFila(matriz, indiceFila) {
   // TODO: Retorna la fila indicada
-  return [];
+  if (indiceFila < 0 || indiceFila >= matriz.length) {
+    return [];
+  }
+
+  return matriz[indiceFila];
 }
 
 /**
