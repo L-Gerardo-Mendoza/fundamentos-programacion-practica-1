@@ -31,10 +31,10 @@ function miInformacion() {
 function operacionesBasicas(a, b) {
   // TODO: Calcula suma, resta, multiplicaciÃ³n y divisiÃ³n de a y b
   
-  const suma = 0;
-  const resta = 0;
-  const multiplicacion = 0;
-  const division = 0;
+  const suma = a + b;
+  const resta = a - b;
+  const multiplicacion = a * b;
+  const division = b !== 0 ? a / b : null;
   
   return { suma, resta, multiplicacion, division };
 }
@@ -47,7 +47,7 @@ function operacionesBasicas(a, b) {
  */
 function areaRectangulo(base, altura) {
   // TODO: Calcula y retorna el Ã¡rea (base * altura)
-  return 0;
+  // return base * altura;
 }
 
 /**
@@ -59,7 +59,7 @@ function areaRectangulo(base, altura) {
  */
 function celsiusAFahrenheit(celsius) {
   // TODO: Implementa la conversiÃ³n
-  return 0;
+  // return celsius * 9/5 + 32;
 }
 
 // ============================================
@@ -74,7 +74,7 @@ function celsiusAFahrenheit(celsius) {
 function parOImpar(numero) {
   // TODO: Usa el operador % (mÃ³dulo) para determinar si es par o impar
   // Pista: Un nÃºmero es par si numero % 2 === 0
-  return "";
+  // return numero % 2 === 0 ? "par" : "impar";
 }
 
 /**
