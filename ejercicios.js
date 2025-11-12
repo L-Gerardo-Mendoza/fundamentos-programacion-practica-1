@@ -361,7 +361,7 @@ function obtenerColumna(matriz, indiceColumna) {
 
 
   for (let i = 0; i < matriz.length; i++) {
-    
+
     if (indiceColumna < matriz[i].length) {
       columna.push(matriz[i][indiceColumna]);
     }
@@ -381,6 +381,15 @@ function obtenerColumna(matriz, indiceColumna) {
 function transponer(matriz) {
   // TODO: Crea la matriz transpuesta
   const transpuesta = [];
+
+  for (let i = 0; i < matriz[0].length; i++) {
+    const fila = [];
+    for (let j = 0; j < matriz.length; j++) {
+      fila.push(matriz[j][i]);
+    }
+    transpuesta.push(fila);
+  }
+
   return transpuesta;
 }
 
