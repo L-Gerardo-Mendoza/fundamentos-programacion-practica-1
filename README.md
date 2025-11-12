@@ -1,103 +1,271 @@
-# Práctica de Fundamentos de Programación
-## Desarrollo de Software y Negocios Digitales
+## 🧮 Fundamentos de Programación - Práctica Final
+## Fecha: 11 de Noviembre de 2025
+## Alumno: Luis Gerardo Sánchez Mendoza
 
- ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
+## -- 🎯 Objetivo de la Documentación -- 
+El objetivo de este documento es registrar y explicar las soluciones desarrolladas durante la práctica final de Fundamentos de Programación.
+Se incluyen todas las secciones y ejercicios realizados en clase, documentando el proceso, razonamiento y código correspondiente.
+Además, se busca aplicar buenas prácticas de documentación técnica utilizando Markdown y control de versiones con Git y GitHub.
 
-¡Bienvenido a la práctica de programación! En este repositorio aprenderás a programar en JavaScript mientras aplicas conceptos de álgebra.
+## 🧠 Ejercicios Realizados
+## -- 🧩 SECCIÓN 1: Variables y Tipos de Datos
+## --> Ejercicio 1.1 - Mi Información Personal
+Enunciado:
+Crear tres variables con el nombre, edad y carrera del alumno, y devolverlas en un objeto.
+Código:
+function miInformacion() {
+  const nombre = "Luis Gerardo Sanchez Mendoza";
+  const edad = 99;
+  const carrera = "TSU";
+  return { nombre, edad, carrera };
+}
 
-## Objetivos
+Procedimiento:
+Se declaran tres variables (nombre, edad, carrera).
+Se agrupan dentro de un objeto usando { nombre, edad, carrera }.
+Se retorna el objeto.
 
-- Aprender a usar Git y GitHub
-- Dominar los fundamentos de JavaScript
-- Prepararte para programar operaciones matriciales
-- Desarrollar habilidades de resolución de problemas
+## --> Ejercicio 1.2 - Operaciones Aritméticas Básicas
+Enunciado:
+Dadas dos variables a y b, calcular su suma, resta, multiplicación y división.
+Código:
+function operacionesBasicas(a, b) {
+  const suma = a + b;
+  const resta = a - b;
+  const multiplicacion = a * b;
+  const division = b !== 0 ? a / b : null;
+  return { suma, resta, multiplicacion, division };
+}
 
-## Requisitos previos
+Procedimiento:
+Se realizan operaciones básicas entre a y b.
+Se evita la división entre cero usando un condicional.
+Se devuelven los resultados dentro de un objeto.
 
-- Tener una cuenta en [GitHub](https://github.com)
-- Instalar [Node.js](https://nodejs.org) (versión 14 o superior)
-- Instalar [Git](https://git-scm.com)
-- Un editor de código como [VS Code](https://code.visualstudio.com)
+## --> Ejercicio 1.3 - Área de un Rectángulo
+Enunciado:
+Calcular el área de un rectángulo dado su base y altura.
+Código:
+function areaRectangulo(base, altura) {
+  return base * altura;
+}
 
-## ¿Cómo empezar?
+Procedimiento:
+Se aplica la fórmula del área: base × altura.
+Se retorna el resultado como número.
+## --> Ejercicio 1.4 - Conversión de Temperatura
+Enunciado:
+Convertir grados Celsius a Fahrenheit con la fórmula F = C × 9/5 + 32.
+Código:
+function celsiusAFahrenheit(celsius) {
+  return celsius * 9/5 + 32;
+}
 
-### Paso 1: Fork del repositorio
-1. Haz clic en el botón **Fork** en la esquina superior derecha
-2. Esto creará una copia del repositorio en tu cuenta
+Procedimiento:
+Se aplica directamente la fórmula de conversión.
+El valor resultante se devuelve como número.
 
-### Paso 2: Clonar tu fork
-```bash
-git clone https://github.com/TU-USUARIO/fundamentos-programacion.git
-cd fundamentos-programacion
-```
+## --🧩 SECCIÓN 2: Condicionales
+Ejercicio 2.1 - Número Par o Impar
+Enunciado:
+Determinar si un número es par o impar usando el operador módulo %.
+Código:
+function parOImpar(numero) {
+  return numero % 2 === 0 ? "par" : "impar";
+}
 
-### Paso 3: Instalar dependencias
-```bash
-npm install
-```
+Procedimiento:
+Se evalúa si numero % 2 es igual a 0.
+Si es verdadero, retorna "par", en caso contrario "impar".
 
-### Paso 4: Completar los ejercicios
-Abre el archivo `ejercicios.js` y completa cada función siguiendo las instrucciones.
+## --> Ejercicio 2.2 - Calificación
+Enunciado:
+Dada una calificación (0–100), devolver "Aprobado" si es mayor o igual a 60, o "Reprobado" en caso contrario.
+Código:
+function evaluarNota(nota) {
+  if (nota >= 60) {
+    return "Aprobado";
+  } else {
+    return "Reprobado";
+  }
+}
 
-### Paso 5: Probar tu código localmente
-```bash
-npm test
-```
+Procedimiento:
+Se usa una estructura if/else para comparar la nota.
+Si cumple la condición >= 60, se devuelve "Aprobado".
+Si no, se devuelve "Reprobado".
 
-### Paso 6: Subir tus cambios
-```bash
-git add ejercicios.js
-git commit -m "Ejercicio #XX completado"
-git push origin main
-```
+## -->Ejercicio 2.3 - Mayor de Tres Números
+Enunciado:
+Identificar el número mayor entre tres valores dados.
+Código:
+function mayorDeTres(a, b, c) {
+  if (a >= b && a >= c) return a;
+  if (b >= a && b >= c) return b;
+  return c;
+}
 
-### Paso 7: Ver tu calificación
-- Ve a la pestaña **Actions** en tu repositorio de GitHub
-- Verás el resultado de los tests automáticos
-- ¡Tu calificación aparecerá allí­!
+Procedimiento:
+Se comparan los tres valores usando condiciones if y operadores lógicos &&.
 
-## Estructura del repositorio
+## --> Ejercicio 2.4 - Clasificación de Edad
+Enunciado:
+Clasificar una edad en las categorías:
+"menor" si 0–17
+"adulto" si 18–64
+"mayor" si 65+
+Código:
+function clasificarEdad(edad) {
+  if (edad >= 0 && edad <= 17) return "menor";
+  else if (edad >= 18 && edad <= 64) return "adulto";
+  else if (edad >= 65) return "mayor";
+  else return "edad inválida";
+}
 
-```
-fundamentos-programacion/
-├── .github/
-│   └── workflows/
-│       └── test.yml           # Configuración de GitHub Actions
-├── ejercicios.js              # Aquí­ escribirás tu código
-├── ejercicios.test.js         # Tests (NO modificar)
-├── package.json               # Configuración del proyecto
-└── README.md                  # Este archivo
-```
+Procedimiento:
+Se usan comparaciones múltiples en if/else if/else para determinar el rango.
 
-## Reglas importantes
+## --🧩 SECCIÓN 3: Funciones y Bucles
+Ejercicio 3.1 - Factorial
+Código:
+function factorial(n) {
+  let resultado = 1;
+  for (let i = 1; i <= n; i++) {
+    resultado *= i;
+  }
+  return resultado;
+}
 
-1. **SOLO** debes modificar el archivo `ejercicios.js`
-2. **NO** modifiques los archivos de test
-3. **NO** modifiques la configuración de GitHub Actions
-4. Todos los ejercicios deben pasar los tests para obtener la máxima calificación
+## --> Ejercicio 3.2 - Suma hasta N
+Código:
+function sumaHastaN(n) {
+  let suma = 0;
+  for (let i = 1; i <= n; i++) {
+    suma += i;
+  }
+  return suma;
+}
 
-## Consejos
+## --> Ejercicio 3.3 - Tabla de Multiplicar
+Código:
+function tablaMultiplicar(numero) {
+  const tabla = [];
+  for (let i = 1; i <= 10; i++) {
+    tabla.push(numero * i);
+  }
+  return tabla;
+}
 
-- Lee cuidadamente las instrucciones de cada ejercicio
-- Prueba tu código localmente antes de hacer push
-- Si un test falla, lee el mensaje de error - te dice qué está mal
-- Puedes hacer múltiples commits, no hay penalización
-- Busca ayuda en la documentación de [JavaScript MDN](https://developer.mozilla.org/es/docs/Web/JavaScript)
+## --> Ejercicio 3.4 - Números Pares
+Código:
+function numerosPares(n) {
+  const pares = [];
+  for (let i = 2; i <= n; i += 2) {
+    pares.push(i);
+  }
+  return pares;
+}
 
-## Sistema de calificación
+## --🧩 SECCIÓN 4: Arrays
+Ejercicio 4.1 - Suma de Elementos
+function sumaArray(numeros) {
+  let suma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i];
+  }
+  return suma;
+}
 
-- Cada ejercicio vale puntos especí­ficos
-- La calificación final es automática
-- Aparecerá en los resultados de GitHub Actions
-- Badge de estado: ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
+## --> Ejercicio 4.2 - Promedio de un Array
+function promedioArray(numeros) {
+  if (numeros.length === 0) return 0;
+  let suma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i];
+  }
+  return suma / numeros.length;
+}
 
-## Próximos pasos
+## --> Ejercicio 4.3 - Encontrar el Máximo
+function encontrarMaximo(numeros) {
+  if (numeros.length === 0) return 0;
+  return Math.max(...numeros);
+}
 
-Una vez domines estos fundamentos, trabajaremos en:
-- Operaciones con matrices
-- Calculadora matricial
-- Aplicaciones prácticas (editores de imágenes, encriptación)
+## --> Ejercicio 4.4 - Filtrar Mayores a un Valor
+function filtrarMayores(numeros, limite) {
+  const mayores = [];
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] > limite) {
+      mayores.push(numeros[i]);
+    }
+  }
+  return mayores;
+}
 
----
+## --> Ejercicio 4.5 - Invertir un Array
+function invertirArray(arr) {
+  return arr.slice().reverse();
+}
+## --🧩 SECCIÓN 5: Arrays Bidimensionales (Matrices)
+## --> Ejercicio 5.1 - Crear una Matriz
+function crearMatriz(filas, columnas) {
+  const matriz = [];
+  for (let i = 0; i < filas; i++) {
+    const fila = [];
+    for (let j = 0; j < columnas; j++) {
+      fila.push(0);
+    }
+    matriz.push(fila);
+  }
+  return matriz;
+}
 
-**¡Éxito en tu práctica!**
+## --> Ejercicio 5.2 - Suma de una Matriz
+function sumaMatriz(matriz) {
+  let suma = 0;
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      suma += matriz[i][j];
+    }
+  }
+  return suma;
+}
+
+## --> Ejercicio 5.3 - Obtener una Fila
+function obtenerFila(matriz, indiceFila) {
+  if (indiceFila < 0 || indiceFila >= matriz.length) {
+    return [];
+  }
+  return matriz[indiceFila];
+}
+## --> Ejercicio 5.4 - Obtener una Columna
+function obtenerColumna(matriz, indiceColumna) {
+  const columna = [];
+  for (let i = 0; i < matriz.length; i++) {
+    if (indiceColumna < matriz[i].length) {
+      columna.push(matriz[i][indiceColumna]);
+    }
+  }
+  return columna;
+}
+
+## --> Ejercicio 5.5 - Transponer una Matriz
+function transponer(matriz) {
+  const transpuesta = [];
+  for (let i = 0; i < matriz[0].length; i++) {
+    const fila = [];
+    for (let j = 0; j < matriz.length; j++) {
+      fila.push(matriz[j][i]);
+    }
+    transpuesta.push(fila);
+  }
+  return transpuesta;
+}
+
+## --✅ Conclusión ---
+Esta práctica permitió reforzar los conceptos fundamentales de programación en JavaScript, desarrollando la habilidad de resolver problemas de álgebra mediante código estructurado.
+Además, se aplicaron buenas prácticas de documentación y control de versiones con Git y GitHub, preparando el terreno para trabajos más complejos en programación y estructuras de datos.
+
+## -👨‍💻 Luis Gerardo Sánchez Mendoza
+## -📅 Tec de Software — 11 de Noviembre de 2025
